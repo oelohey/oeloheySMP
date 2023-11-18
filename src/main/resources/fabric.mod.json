@@ -1,0 +1,50 @@
+{
+	"schemaVersion": 1,
+	"id": "oelohey_smp",
+	"version": "${version}",
+	"name": "Oelohey Smp",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"oelohey"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/oelohey_smp/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "net.oelohey.oelohey_smp.OeloheySmp",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "net.oelohey.oelohey_smp.OeloheySmpClient",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "net.oelohey.oelohey_smp.OeloheySmpDataGenerator",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"oelohey_smp.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.24",
+		"minecraft": "~1.20.2",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-language-kotlin": ">=1.9.20"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
